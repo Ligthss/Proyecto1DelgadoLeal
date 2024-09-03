@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+
+/* Header Styles */
+.header {
+  @apply bg-gradient-to-r from-[#6a1b9a] to-[#1e3c72] text-white;
+  @apply sticky top-0 z-30; /* Hace que el encabezado sea fijo y se quede en la parte superior */
+  @apply transition-colors duration-300; /* Transición suave para los cambios de color */
+}
+
+.header.scrolled {
+  @apply bg-gradient-to-r from-[#8e24aa] to-[#3949ab] text-white; /* Fondo más claro cuando se hace scroll */
+}
+
+.header .nav-content {
+  @apply flex items-center justify-between p-4;
+}
+
+.header .nav-content ul {
+  @apply flex space-x-4; /* Separación entre los elementos de la lista */
+}
+
+.header .nav-content ul li {
+  @apply border border-white rounded-lg;
+}
+
+.header .nav-content ul li a {
+  @apply block px-4 py-2 font-bold no-underline transition-colors duration-300; /* Transición suave para el color del texto */
+}
+
+.header.scrolled .nav-content ul li a {
+  @apply text-white; /* Mantiene el texto blanco cuando se hace scroll */
+}
+
+.header.scrolled .nav-content ul li {
+  @apply border-white; /* Mantiene el borde blanco cuando se hace scroll */
+}
+
+/* Hero Section Styles */
+.hero {
+  @apply py-12 text-center px-4;
+  background: linear-gradient(90deg, #6a1b9a 0%, #1e3c72 100%); /* Degradado de azules y morados */
+}
+
+.hero h1 {
+  @apply text-4xl font-bold mb-4;
+}
+
+.hero p {
+  @apply text-lg mb-8;
+}
+
+/* Asegúrate de incluir estas reglas en tu archivo CSS */
+.hero-box {
+  background: rgba(255, 255, 255, 0.6); /* Blanco tenue con mayor opacidad */
+}
+.gradient-text {
+  background: linear-gradient(to right, #6a1b9a, #1e3c72);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+/* Asegúrate de incluir estas reglas en tu archivo CSS */
+.contact-bg {
+  background: rgba(255, 255, 255, 0.4); /* Blanco tenue con menor opacidad */
+}
+.contact-text {
+  background: linear-gradient(to right, #6a1b9a, #1e3c72);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+/* Downloads Section Styles */
+.downloads {
+  @apply bg-gradient-to-r from-[#6a1b9a] to-[#1e3c72] py-12 px-4; /* Añadido padding horizontal */
+}
+
+.downloads-header {
+  @apply bg-[#e0e0e0] text-[#6a1b9a] p-4 rounded-lg mb-4 text-center shadow-md; /* Fondo claro con texto morado, bordes redondeados, menos padding y sombra */
+  @apply max-w-xs mx-auto; /* Tamaño reducido y centrado */
+}
+
+.downloads-header h2 {
+  @apply text-2xl font-bold mb-1; /* Título ajustado */
+}
+
+.downloads-header p {
+  @apply text-base; /* Texto descriptivo reducido */
+}
+
+.download-card {
+  @apply bg-white p-6 rounded-lg shadow-lg flex flex-col items-center;
+  @apply mb-3; /* Ajuste de separación entre los cuadros */
+  @apply mx-auto; /* Centra los cuadros */
+}
+
+.download-card {
+  @apply max-w-sm; /* Define un ancho máximo para los cuadros */
+}
+
+.btn {
+  @apply py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out text-[#6a1b9a] bg-white hover:bg-gray-100; /* Color de texto y fondo del botón de descarga */
+}
+
+/* Call to Action Section Styles */
+.cta {
+  @apply bg-gradient-to-r from-[#6a1b9a] to-[#1e3c72] text-white text-center py-12;
+}
+
+.cta h2 {
+  @apply text-3xl font-bold mb-4;
+}
+
+.cta p {
+  @apply text-lg mb-6;
+}
+
+.cta-btn {
+  @apply bg-white text-[#6a1b9a] py-2 px-4 rounded-lg shadow-md hover:bg-gray-100;
+}
+
+.input-shadow {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+.textarea-shadow {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Footer Styles */
+.footer {
+  @apply bg-gradient-to-r from-[#6a1b9a] to-[#1e3c72] text-white py-6;
+}
+
+.footer ul {
+  @apply flex space-x-4;
+}
+
+.footer ul li a {
+  @apply block px-4 py-2 text-white hover:text-gray-400;
+}
+
+/* Contact Section Styles */
+.contact-bg {
+  @apply bg-gradient-to-r from-[#6a1b9a] to-[#1e3c72] p-8;
+}
+
+.contact-card {
+  @apply bg-white p-8 rounded-lg shadow-lg border-4 border-[#8e24aa];
+}
